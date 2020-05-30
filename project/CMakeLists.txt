@@ -1,13 +1,9 @@
-cmake_minimum_required(VERSION 2.8)
-									
+﻿# CMakeList.txt: проект CMake для project2; включите исходный код и определения,
+# укажите здесь логику для конкретного проекта.
+#
+cmake_minimum_required (VERSION 3.8)
 
-project(DataFileReader)			
+# Добавьте источник в исполняемый файл этого проекта.
+add_executable (project2 "project2.cpp" "project2.h" "Tables.bin")
 
-set(SOURCE_EXE src/DataFileReaderApp.cpp)		
-
-set(SOURCE_LIB src/FileLine.cpp)			
-
-add_library(fileline STATIC ${SOURCE_LIB})	
-add_executable(main ${SOURCE_EXE})	
-
-target_link_libraries(main fileline)		
+# TODO: Добавьте тесты и целевые объекты, если это необходимо.
